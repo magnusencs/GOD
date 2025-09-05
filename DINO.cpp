@@ -6,7 +6,7 @@
 #include <windows.h>
 #include <cstdlib>
 #include <ctime>
-#pragma comment(lib, "winmm.lib")
+#pragma comment(lib, "winmm.lib") //delete this to run the code
 using namespace std;
 
 const int WIDTH = 120;
@@ -108,7 +108,7 @@ int main() {
     hideCursor();
 
     // music loop (ubah path sesuai file kamu)
-    PlaySound(TEXT("C:\\Users\\MyBook Hype\\Videos\\BILLYIDOL.WAV"), NULL, SND_FILENAME | SND_ASYNC | SND_LOOP);
+    PlaySound(TEXT("C:\\Users\\MyBook Hype\\Videos\\BILLYIDOL.WAV"), NULL, SND_FILENAME | SND_ASYNC | SND_LOOP); //delete this as well
 
     Dino dino;
 
@@ -174,3 +174,4 @@ int main() {
 
     return 0;
 }
+
