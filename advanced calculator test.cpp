@@ -1,50 +1,38 @@
 #include <iostream>
-using namespace std;
+#include <sstream>
+#include <vector>
+#include <string>
 
-int main(){
-    char repeat;
-do   {
-    double num1, num2; 
+int main() {
+    std::cout << "Masukkan ekspresi: ";
+    std::string input;
+    std::getline(std::cin, input);
 
-     long double result;    
+    std::stringstream ss(input);
+    double num;
     char op;
-    
-    cout << "Enter numbers: ";
-    cin >> num1;
-    cout << endl;
-    
-    cout << "Enter operator (*, /, +, -): ";
-    cin >> op;
-    cout << endl;
-    
-    cout << "Enter second number: ";
-    cin >> num2;
-    
-    if (op == '*') {
-        result = num1 * num2;
-    } else if (op == '/') {
-        if (num2 != 0) {
-            result = num1 / num2;
-        } else {
-            cout << "Error: Division by zero" << endl;
+    std::vector<double> numbers;
+    std::vector<char> operators;
+    ss >> num;
+    numbers.push_back(num);
+
+    while(ss >> op >> num) {
+        operators.push_back(op);
+        numbers.push_back(num);
+    }
+
+    double result = numbers[0];
+    for(size_t i = 0; i < operators.size(); i++) {
+        if(operators[i] == '+') result += numbers[i+1];
+        else if(operators[i] == '-') result -= numbers[i+1];
+        else if(operators[i] == '*') result *= numbers[i+1];
+        else if(operators[i] == '/') result /= numbers[i+1];
+        else {
+            std::cout << "Operator tidak dikenali: " << operators[i] << "\n";
             return 1;
         }
-    } else if (op == '+') {
-        result = num1 + num2;
-    } else if (op == '-') {
-        result = num1 - num2;
-    } else {
-        cout << "Invalid operator." << endl;
-        return 1;
     }
-    
-    cout << "Result: " << result << endl;
-  
-  cout<<"repeat program (y/n)"<<endl;
-  
-  cin>>repeat;
-    
-}while ( repeat=='y'|| repeat == 'Y');
-    return 0;
 
+    std::cout << "Hasil = " << result << std::endl;
+    return 0;
 }
