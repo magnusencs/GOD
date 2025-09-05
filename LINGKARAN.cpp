@@ -11,29 +11,11 @@ int main ()
 	
    double jawaban = (radius*radius)*pi;
    cout << fixed << setprecision(5);
-   cout<<"HASILNYA ADALAH: "<<jawaban;
-  
-  
-  string halo = "halo";
-  halo[0] == 'h';
-  int x = 123
-  string sementara = to_string(x);
-  // sementara [i] == '0';
-  //break;
-  // string hasil
-
-int y = stoi(hasil);
-cout<<y;
-
-
- string nama[11] = 'K';
- if (nama[11] == 'k');
-  
+   cout<<"HASILNYA ADALAH: "<<jawabann
 
 	return 0;
 }
 
 
 
- if () {}
- else {}
+ 
