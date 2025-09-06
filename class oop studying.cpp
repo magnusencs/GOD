@@ -76,33 +76,3 @@ string choice;
 
 
 
-/*(class mobil {
-    public: 
-    string merk;
-    int speed;
-    void shorter (string m, int s) {
-        merk = m;
-        speed = s;
-    }
-    vector <string> garage;
-    garage.push_back({m,s})
-    void printer ( ) {
-        for (const auto print : garage) {
-            
-        }d
-    }
-  };
-
-
-        int main ()
-        
-        { /*mobil mobil1;
-          mobil1.merk = "toyota";
-          mobil1.speed = 123;
-          cout<<mobil1.merk<<",  "<<mobil1.speed;
-          //hmm. i wonder if i can just use pair instead of...wait...i think constructor will work too..
-          mobil mobil1;
-          mobil1.shorter("toyota", 120);
-         
-          */
-        }
