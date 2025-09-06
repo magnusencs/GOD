@@ -14,7 +14,7 @@ int main ()
   int percobaan = 5;
 
   cout<<"selamat datang di game tebak angka!;"<<endl;
-   PlaySound(TEXT("C:\\Users\\MyBook Hype\\Videos\\"), NULL, SND_FILENAME | SND_ASYNC);
+  // PlaySound(TEXT("C:\\Users\\MyBook Hype\\Videos\\"), NULL, SND_FILENAME | SND_ASYNC);
    //ah capek ah
   do {
   	cout<<"tebak angka anda 1-50"<<endl;
@@ -35,3 +35,4 @@ int main ()
 
   } 
 	
+
