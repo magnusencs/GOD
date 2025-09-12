@@ -19,7 +19,10 @@ void generateRandomDoubles()
   int count_outside = 0;
 
     vector <int> rand = {1,2,3,4,5,6,7,8,9,10};
-    vector <int> sleeprand = {10,20,30,40,50,60,70,80,90,100};
+    vector <int> sleeprand;
+    for (int i = 1; i <=150; i+=5)(
+    sleeprand.push_back(i);
+    }
     int val = randgen(0, rand.size()-1);
     const int triple = 3;
     for (int i = 0; i<= val; ++i){
