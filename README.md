@@ -1,6 +1,10 @@
+# SWEET_AMELIA
 
-basically all the short-scripted code ive built over the years when i learn c++. there are still an infinitely much to learn in programming. because to be fair. i accept the fact im an amateur one, i havent learn other tech stacks that would allow me to explore a real projects
-to became what you wanted on this field, you need to be OBSESSED with it. this is a brutal truth. because the field itself is beyond brutal.
+This folder contains all the short scripts I’ve built over the years while learning **C++**.  
 
+💡 Notes:  
+- Programming is infinite — there’s always more to learn.  
+- I fully accept that I’m still an amateur; I haven’t explored other tech stacks yet that would allow me to build larger, real-world projects.  
+- To become what you want in this field, you need to be **obsessed** with it. That’s the brutal truth, because the field itself is beyond brutal.  
 
-also, some of these code you may not be able to run because it had local asset from my computer. 
+⚠️ Some of these scripts might not run properly because they rely on local assets from my computer.  
