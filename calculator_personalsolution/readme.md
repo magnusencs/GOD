@@ -62,4 +62,17 @@ g++ calculator.cpp -o calculator
 📌 Why?
 
 ¯\(ツ)/¯
-Because I want it, not because i can. i spent 4 days making this, 90% of the time was wondering the solutions, until i eventually gave up and ask gpt for the last 30% of the code, that's when he suggest i shuld use used() to avoid duplicate and use stack to stack numbers.
+Because I want it, not because I can.
+
+I spent 4 days making this.
+90% of the time was me staring at the code, overthinking solutions.
+Eventually, I gave up and asked GPT for help with the last 30%. That’s when it suggested:
+
+Use used[] to avoid duplicates.
+
+Use a stack to handle calculations.
+
+…and yeah, it worked.
+But then GPT casually said: “btw there’s a cleaner way that takes like a quarter of your code.”
+
+Pain. But at least this version is mine. human LOVES to create things.
