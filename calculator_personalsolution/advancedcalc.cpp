@@ -5,6 +5,7 @@
 #include <vector>
 #include <stack>
 #include <cctype>
+#include <limits>
 using namespace std;
 
 double calculator(string expression){
@@ -148,8 +149,7 @@ int main (){
     getline(cin, exp);     
     calculator(exp);
     cout << "ingin menghitung lagi? (y/n): ";
-    cin >> yes;
-    cin.ignore(numeric_limits<streamsize>::max(), '\n'); //prevent new program to read previous input
+    cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); //prevent new program to read previous input
     } while (yes == 'y' || yes == 'Y');
 
 
