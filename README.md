@@ -1,5 +1,4 @@
-# SWEET_AMELIA
-
+# WHITE_CAROLIME
 This folder contains all the short scripts I’ve built over the years while learning **C++**.  
 
 💡 Notes:  
