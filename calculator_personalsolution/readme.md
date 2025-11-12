@@ -1,6 +1,6 @@
 🔢 Hardcore Expression Calculator
 
-So—this is basically a calculator that reads a math expression from a string and evaluates it.
+this is basically a calculator that reads a math expression from a string and evaluates it.
 It’s kinda like a manual, DIY version of the Shunting Yard algorithm, but built using my own personal approach.
 
 Honestly… I don’t even know why I made this. 
@@ -61,7 +61,6 @@ g++ calculator.cpp -o calculator
 
 📌 Why?
 
-¯\(ツ)/¯
 Because I want it, not because I can.
 
 I spent 4 days making this.
@@ -75,4 +74,4 @@ Use a stack to handle calculations.
 …and yeah, it worked.
 But then GPT casually said: “btw there’s a cleaner way that takes like a quarter of your code.”
 
-Pain. But at least this version is mine. human LOVES to create things.
+Pain.
