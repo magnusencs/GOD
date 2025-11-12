@@ -1,0 +1,205 @@
+#include <iostream>
+#include <windows.h>
+#include <cctype>
+using namespace std;
+
+string kontainer[100];
+int index_kontainer = 0;
+int harga_total = 0;
+
+void beli(int &pilih, int &panjang, string merk[], int harga[]) {
+    if (pilih >= 1 && pilih <= panjang) {
+        kontainer[index_kontainer] = merk[pilih - 1];
+        index_kontainer++;
+        cout << "Anda memilih: " << merk[pilih - 1] << " dengan harga: Rp " << harga[pilih - 1] << endl;
+        harga_total += harga[pilih - 1];
+    } else {
+        cout << "Pilihan tidak valid." << endl;
+        return;
+    }
+}
+
+void VGA() {
+    char lagi;
+    do {
+        string merk[5] = {"RTX 3060", "GTX 1660", "RX 6600", "RTX 2080", "GTX 1050 Ti"};
+        int harga[5] = {5000000, 4000000, 4500000, 7000000, 3000000};
+        int panjang = sizeof(merk) / sizeof(merk[0]);
+        for (int i = 0; i < panjang; ++i)
+            cout << i + 1 << ". " << merk[i] << " - Rp " << harga[i] << endl;
+        cout << "Pilih VGA yang anda inginkan: ";
+        int pilih;
+        cin >> pilih;
+        beli(pilih, panjang, merk, harga);
+        cout << "Apakah anda ingin menambah komponen lain? (y/n): ";
+        cin >> lagi;
+    } while (tolower(lagi) == 'y');
+}
+
+void CPU() {
+    char lagi;
+    do {
+        string merk[5] = {"Intel i5", "Intel i7", "AMD Ryzen 5", "AMD Ryzen 7", "Intel i9"};
+        int harga[5] = {2000000, 3000000, 2500000, 3500000, 5000000};
+        int panjang = sizeof(merk) / sizeof(merk[0]);
+        for (int i = 0; i < panjang; ++i)
+            cout << i + 1 << ". " << merk[i] << " - Rp " << harga[i] << endl;
+        cout << "Pilih CPU yang anda inginkan: ";
+        int pilih;
+        cin >> pilih;
+        beli(pilih, panjang, merk, harga);
+        cout << "Apakah anda ingin menambah komponen lain? (y/n): ";
+        cin >> lagi;
+    } while (tolower(lagi) == 'y');
+}
+
+void RAM() {
+    char lagi;
+    do {
+        string merk[5] = {"Corsair Vengeance", "G.Skill Trident Z", "Kingston HyperX", "Crucial Ballistix", "Patriot Viper"};
+        int harga[5] = {800000, 900000, 750000, 850000, 700000};
+        int panjang = sizeof(merk) / sizeof(merk[0]);
+        for (int i = 0; i < panjang; ++i)
+            cout << i + 1 << ". " << merk[i] << " - Rp " << harga[i] << endl;
+        cout << "Pilih RAM yang anda inginkan: ";
+        int pilih;
+        cin >> pilih;
+        beli(pilih, panjang, merk, harga);
+        cout << "Apakah anda ingin menambah komponen lain? (y/n): ";
+        cin >> lagi;
+    } while (tolower(lagi) == 'y');
+}
+
+void ROM() {
+    char lagi;
+    do {
+        string merk[5] = {"Samsung EVO", "Western Digital Blue", "Crucial MX", "Kingston A2000", "Seagate Barracuda"};
+        int harga[5] = {1000000, 900000, 950000, 850000, 800000};
+        int panjang = sizeof(merk) / sizeof(merk[0]);
+        for (int i = 0; i < panjang; ++i)
+            cout << i + 1 << ". " << merk[i] << " - Rp " << harga[i] << endl;
+        cout << "Pilih ROM yang anda inginkan: ";
+        int pilih;
+        cin >> pilih;
+        beli(pilih, panjang, merk, harga);
+        cout << "Apakah anda ingin menambah komponen lain? (y/n): ";
+        cin >> lagi;
+    } while (tolower(lagi) == 'y');
+}
+
+void MOTHERBOARD() {
+    char lagi;
+    do {
+        string merk[5] = {"ASUS ROG", "MSI MPG", "Gigabyte Aorus", "ASRock Phantom", "EVGA Dark"};
+        int harga[5] = {2500000, 2200000, 2400000, 2100000, 2600000};
+        int panjang = sizeof(merk) / sizeof(merk[0]);
+        for (int i = 0; i < panjang; ++i)
+            cout << i + 1 << ". " << merk[i] << " - Rp " << harga[i] << endl;
+        cout << "Pilih Motherboard yang anda inginkan: ";
+        int pilih;
+        cin >> pilih;
+        beli(pilih, panjang, merk, harga);
+        cout << "Apakah anda ingin menambah komponen lain? (y/n): ";
+        cin >> lagi;
+    } while (tolower(lagi) == 'y');
+}
+
+void PC_CASE() {
+    char lagi;
+    do {
+        string merk[5] = {"NZXT H510", "Corsair 4000D", "Fractal Meshify", "Cooler MasterBox", "Lian Li PC-O11"};
+        int harga[5] = {1000000, 900000, 950000, 850000, 1200000};
+        int panjang = sizeof(merk) / sizeof(merk[0]);
+        for (int i = 0; i < panjang; ++i)
+            cout << i + 1 << ". " << merk[i] << " - Rp " << harga[i] << endl;
+        cout << "Pilih PC Case yang anda inginkan: ";
+        int pilih;
+        cin >> pilih;
+        beli(pilih, panjang, merk, harga);
+        cout << "Apakah anda ingin menambah komponen lain? (y/n): ";
+        cin >> lagi;
+    } while (tolower(lagi) == 'y');
+}
+
+void show_part() {
+    char lagi;
+    do {
+        system("cls");
+        string parts[7] = {"VGA", "CPU", "RAM", "ROM", "MOTHERBOARD", "PC CASE", "Keluar"};
+        int panjang_part = sizeof(parts) / sizeof(parts[0]);
+        for (int i = 0; i < panjang_part; ++i)
+            cout << i + 1 << ". " << parts[i] << endl;
+        cout << "Pilih bagian PC yang anda inginkan: ";
+        int pilih;
+        cin >> pilih;
+        switch (pilih) {
+            case 1: VGA(); break;
+            case 2: CPU(); break;
+            case 3: RAM(); break;
+            case 4: ROM(); break;
+            case 5: MOTHERBOARD(); break;
+            case 6: PC_CASE(); break;
+            case 7: break;
+            default: cout << "Pilihan tidak valid." << endl; break;
+        }
+        cout << "Apakah anda ingin kembali ke menu bagian PC? (y/n): ";
+        cin >> lagi;
+    } while (tolower(lagi) == 'y');
+}
+
+void show_laptop() {
+    char lagi;
+    do {
+        system("cls");
+        cout << "Daftar Laptop yang tersedia:\n";
+        string merk[5] = {"Asus ROG", "Dell XPS", "MacBook Pro", "HP Spectre", "Lenovo ThinkPad"};
+        int harga[5] = {12000000, 15000000, 20000000, 13000000, 14000000};
+        int panjang = sizeof(merk) / sizeof(merk[0]);
+        for (int i = 0; i < panjang; ++i)
+            cout << i + 1 << ". " << merk[i] << " - Rp " << harga[i] << endl;
+        cout << "Pilih laptop yang anda inginkan: ";
+        int pilih;
+        cin >> pilih;
+        beli(pilih, panjang, merk, harga);
+        cout << "Apakah anda ingin membeli lagi? (y/n): ";
+        cin >> lagi;
+    } while (tolower(lagi) == 'y');
+}
+
+int main() {
+    char lagi;
+    do {
+        system("cls");
+        system("color 78");
+        cout << "Selamat Datang di Program Toko Komputer!\n";
+        cout << "1. Bagian PC\n";
+        cout << "2. Laptop\n";
+        cout << "3. Keluar\n";
+        cout << "Pilih menu: ";
+        int ask;
+        cin >> ask;
+        if (ask == 1) {
+            show_part();
+        } else if (ask == 2) {
+            show_laptop();
+        } else if (ask == 3) {
+            lagi = 'n';
+            break;
+        } else {
+            cout << "Pilihan tidak valid." << endl;
+        }
+        cout << "Apakah anda ingin kembali ke menu utama? (y/n): ";
+        cin >> lagi;
+    } while (tolower(lagi) == 'y');
+
+    cout << "\n==============================\n";
+    cout << "Komponen yang anda pilih:\n";
+    for (int i = 0; i < index_kontainer; ++i)
+        cout << i + 1 << ". " << kontainer[i] << endl;
+    cout << "------------------------------\n";
+    cout << "Total harga: Rp " << harga_total << endl;
+    cout << "==============================\n";
+    cout << "Terima kasih telah menggunakan program kami!\n";
+
+    return 0;
+}
