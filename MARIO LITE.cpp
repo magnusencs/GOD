@@ -73,6 +73,10 @@ struct mov {
     int y;
 };
 
+
+
+
+//unfinished
 int main () 
 {
     system("color 3d");
